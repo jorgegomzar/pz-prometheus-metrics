@@ -1,0 +1,6 @@
+id=pz-prometheus-metrics
+name=pz-prometheus-metrics
+description=Prometheus metrics for your PZ dedicated server
+poster=poster.png
+tags=Build 42
+versionMin=42.0

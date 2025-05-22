@@ -1,0 +1,12 @@
+version=1
+title=pz-prometheus-metrics
+description=[h2]Prometheus Metrics for Project Zomboid Dedicated Servers.[/h2]
+description=
+description=[p]Do you want to monitor your PZ server stats via tools like Grafana? I sure do![/p]
+description=[p]This mod exposes some metrics for you to use with Prometheus and any other monitoring tooling you prefer.[/p]
+description=
+description=[p]**This mod ONLY exposes the metrics in Prometheus style, you'll need to do the Grafana configuration.**[/p]
+description=
+description=[h3]Copyright 2025 jorgegomzar. This item is not authorized for posting on Steam, except under the Steam account named BenoBelmont.[/h3]
+tags=Build 42;
+visibility=unlisted
