@@ -3,6 +3,8 @@ if not isServer() then
 	return
 end
 
+sendClientCommand("PrometheusMetrics", "write", { mask = "admin", message = "Starting" })
+
 -- ProjectZomboid Prometheus metrics served at /metrics
 
 -- GLOBAL
@@ -142,6 +144,8 @@ local function formatMetrics()
 	return table.concat(lines, "\n")
 end
 
+sendClientCommand("PrometheusMetrics", "write", { mask = "admin", message = "Setting up Prometheus metrics" })
+
 -- Configurar servidor HTTP para /metrics
 local HttpServer = luajava.bindClass("com.sun.net.httpserver.HttpServer")
 local InetSocketAddress = luajava.bindClass("java.net.InetSocketAddress")
@@ -162,5 +166,8 @@ server:createContext(
 )
 server:setExecutor(nil) -- usa el executor por defecto
 server:start()
-
-print("Prometheus metrics server started on port 9090")
+sendClientCommand(
+	"PrometheusMetrics",
+	"write",
+	{ mask = "admin", message = "Prometheus metrics server started on port 9090" }
+)
